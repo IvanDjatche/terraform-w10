@@ -41,3 +41,9 @@ output "private_subnet2_id" {
   value = aws_subnet.private_subnet2.id
 }
 
+output "load_balancer_dns_name" {
+  value = aws_lb.application-lb.dns_name
+}
+output "load_balancer_url" {
+  value = "http://${aws_lb.application-lb.dns_name}"
+}
